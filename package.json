@@ -1,6 +1,6 @@
 {
   "name": "id-tif",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Identify a TIF File in a Variety of In-Memory Objects, including ArrayBuffer, Buffer, DataView, and Uint8Array",
   "main": "index.js",
   "scripts": {

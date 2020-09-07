@@ -2,6 +2,11 @@ const test = require("ava");
 const fs = require("fs");
 const idTIF = require("./index");
 
+test("identifying tif url", (t) => {
+  const url = "https://example.org/flower.tiff";
+  t.true(idTIF(url));
+});
+
 test("identifying tif file", (t) => {
   const buffer = fs.readFileSync("./data/flower.tif");
   const arrayBuffer = buffer.buffer;

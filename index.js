@@ -3,13 +3,18 @@ const getByte = require("get-byte");
 module.exports = function (data, debug) {
   if (debug) console.log("data:", data);
 
-  const length = data.length !== undefined ? data.length : data.byteLength !== undefined ? data.byteLength : null;
+  const length =
+    data.length !== undefined
+      ? data.length
+      : data.byteLength !== undefined
+      ? data.byteLength
+      : null;
   if (debug) console.log("length:", length);
 
   if (typeof data === "string") {
     return (
       (length > 4 && data.toLowerCase().endsWith(".tif")) ||
-      data.toLowerCase().endswith(".tiff")
+      data.toLowerCase().endsWith(".tiff")
     );
   } else {
     if (length < 4) {
